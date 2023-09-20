@@ -1,0 +1,283 @@
+<mvc:View
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m" xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:core="sap.ui.core"
+		controllerName="learnui5.controller.view1"
+		displayBlock="true">
+
+    <Page id="page" title="{i18n>title}" class="pagestyle">
+        <content>
+        
+        <!-- Hello World -->
+		<!-- <Text xmlns="sap.m" text="Hello World" id="text5"/> -->
+        <!--_____________________________________________________________________________-->
+
+		<!-- Simple Form View -->
+        <f:SimpleForm id="SimpleFormView"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					title="SimpleForm layout Example"
+					labelSpanXL="3"
+					labelSpanL="3"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="2"
+					columnsM="1"
+					singleContainerFullSize="false">
+			
+			<f:content>
+
+            <core:Title text="Employee 1"/>
+
+                <Label text="Name"/>
+				<Input id="nameSFV1" value="Sarvesh"/>
+				
+				<Label text="Street/No."/>
+				<Input value="Prabhat Colony"/>
+				<Input value="101"/>				
+				
+				<Label text="ZIP Code/City"/>                    
+				<Input value="444605">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4"/>
+					</layoutData>
+				</Input>
+				<Input value="Amravati"/>
+
+				<Label text="Country"/>
+				<Select id="countrySFV1" selectedKey="India">
+					<items>
+						<core:Item text="England" key="England"/>
+                        <core:Item text="India" key="India"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select>
+
+            <core:Title text="Employee 2"/>
+				
+				<Label text="Name"/>
+				<Input id="nameSFV2" value="Sarvesh"/>
+				
+				<Label text="Street/No."/>
+				<Input value="Prabhat Colony">
+				</Input>
+				<Input value="101">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4"/>
+					</layoutData>
+				</Input>
+				
+				<Label text="ZIP Code/City"/>                    
+				<Input value="444605">
+					<layoutData>
+						<l:GridData span="XL1 L2 M2 S4"/>
+					</layoutData>
+				</Input>
+				<Input value="Amravati"/>
+
+				<Label text="Country"/>
+				<Select id="countrySFV2" selectedKey="India">
+					<items>
+						<core:Item text="England" key="England"/>
+                        <core:Item text="India" key="India"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select>
+
+			</f:content>
+		</f:SimpleForm>
+		<!--_____________________________________________________________________________-->
+
+		
+		<!-- Grid -->
+		<l:Grid defaultSpan="XL3 L3 M6 S12" defaultIndent="XL2 L2 M2 S2">		
+      		<l:content>
+
+				<VBox >
+				<Label text="Field 1"/>
+				<Input/>
+				
+         		
+				<Label text="Field 3"/>
+				<Input/>
+				
+         		
+				<Label text="Field 5"/>
+				<Input/>
+				</VBox>
+         		
+				<VBox>
+				<Label text="Field 2"/>
+				<Input/>
+				
+         		
+				<Label text="Field 4"/>
+				<Input/>
+				
+         		
+				<Label text="Field 6"/>
+				<Input/>
+				</VBox>				
+         						      
+      		</l:content>
+		</l:Grid>
+		<!--_____________________________________________________________________________-->
+
+
+		<!-- Button -->
+					
+			
+				<Button text="Default" press="onPress"/>
+				<Button type="Accept" text="Accept" press="onPress"/>
+				<Button type="Reject" text="Reject" press="onPress"/>
+				<Button type="Critical" text="Criticle" press="onPress"/>
+
+			
+		<!--_____________________________________________________________________________-->
+
+		<!-- Form Validation Form -->
+		<f:SimpleForm id="FormValidationForm"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					title="Form Validation Example"
+					labelSpanXL="2"
+					labelSpanL="2"
+					labelSpanM="2"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="1"
+					emptySpanL="1"
+					emptySpanM="1"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false">
+			
+			<f:content>
+
+            <core:Title text="Employee Details"/>
+
+                <Label text="Employee ID" required="true"/>
+				<Input id="employeeIDFVF1" type="Text" maxLength="8"/>					
+
+				<Label text="Name"/>
+				<Input id="nameFVF1" type="Text"/>	
+
+				<Label text="Career Level"/>
+				<Input id="careerLevelFVF1" type="Text"/>	
+
+				<Label text="E-mail"/>
+				<Input id="emailFVF1" type="Text"/>	
+
+				<Label text="Phone No."/>
+				<Input id="phoneNoFVF1" type="Text"/>
+
+				<Label text="Pin Code"/>
+				<Input id="pinCodeFVF1" type="Text"/>						
+				
+				<Label></Label>
+				<Button type="Emphasized" text="Submit" width="100px" press="onSubmit"/>
+				           
+			</f:content>
+		</f:SimpleForm>
+		<!--_____________________________________________________________________________-->
+
+		<!-- LiveChange Validation Form -->
+		<f:SimpleForm id="LiveChangeValidationForm"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					title="LiveChange Form Validation Example"
+					labelSpanXL="2"
+					labelSpanL="2"
+					labelSpanM="2"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="1"
+					emptySpanL="1"
+					emptySpanM="1"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false">
+			
+			<f:content>
+
+            <core:Title text="Employee Details"/>
+
+                <Label text="Employee ID" required="true"/>
+				<Input id="employeeIDLVF" type="Text" maxLength="8" liveChange="onLiveChange"/>					
+
+				<Label text="Name" required="true"/>
+				<Input id="nameLVF" type="Text" liveChange="onLiveChange"/>	
+
+				<Label text="Career Level"/>
+				<Input id="careerLevelLVF" type="Text" maxLength="2" liveChange="onLiveChange"/>	
+
+				<Label text="E-mail"/>
+				<Input id="emailLVF" type="Text" liveChange="onLiveChange"/>	
+
+				<Label text="Phone No." required="true"/>
+				<Input id="phoneNoLVF" type="Text" maxLength="10" liveChange="onLiveChange"/>
+
+				<Label text="Pin Code"/>
+				<Input id="pinCodeLVF" type="Text" maxLength="6" liveChange="onLiveChange"/>						
+				
+				<Label></Label>
+				<Button type="Emphasized" text="Submit" width="100px" press="onSubmitLVF"/>
+				           
+			</f:content>
+		</f:SimpleForm>
+		<!--_____________________________________________________________________________-->
+
+
+		<!-- Log-in Page -->
+		<VBox class="vboxstyle">
+		<f:SimpleForm id="LoginPage"
+					editable="true"
+					layout="ResponsiveGridLayout"
+					title="Login Page Example"
+					labelSpanXL="4"
+					labelSpanL="4"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsXL="1"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false"
+					class="login-container">
+			
+			<f:content>
+
+            <core:Title text="Enter your Credentials"/>
+
+                <Label text="Username"/>
+				<Input id="usernamelp" type="Text"/>					
+
+				<Label text="Password"/>
+				<Input id="passwordlp" type="Password"/>										
+				
+				<Label></Label>
+				<Button type="Emphasized" text="Login" width="100px" press="onLogin"/>
+				           
+			</f:content>
+		</f:SimpleForm>
+		</VBox>
+    </content>		
+    </Page>
+</mvc:View>

@@ -1,0 +1,18 @@
+<mvc:View
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns="sap.m"
+		xmlns:l="sap.ui.layout"
+		xmlns:f="sap.ui.layout.form"
+		xmlns:core="sap.ui.core"
+		controllerName="learnui5.controller.view2"
+		displayBlock="true">
+
+    <Page id="page" title="{i18n>title}">
+        <content>
+		    <VBox class="">
+		        <Text text="This was a demonstration of ROUTER/NAVIGATION"></Text>
+		        <Button type="Emphasized" text="Home" width="100px" press="onGoToView1"/>
+		    </VBox>
+        </content>		
+    </Page>
+</mvc:View>
